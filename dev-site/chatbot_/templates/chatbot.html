@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consumo Consciente - Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body class="flex items-center justify-center p-4 bg-gray-100">
+  <div
+    class="chat-container w-full max-w-md flex flex-col h-[600px] border rounded-lg overflow-hidden shadow-lg bg-white"
+  >
+    <div class="chat-header p-4 flex items-center border-b">
+      <div class="flex items-center space-x-3">
+        <div class="relative">
+          <img
+            src="https://i.ibb.co/hRD4DmfN/logo.png"
+            class="w-10 h-10 rounded-full"
+            alt="Logo"
+          />
+          <span class="online-icon"></span>
+        </div>
+        <div>
+          <h2 class="font-semibold text-gray-800">Consumo Consciente</h2>
+          <p class="text-xs text-gray-500">Online</p>
+        </div>
+      </div>
+    </div>
+    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto">
+      <div class="flex justify-start mb-4 items-end">
+        <img
+          src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png"
+          class="w-8 h-8 rounded-full mr-3"
+          alt="Bot"
+        />
+        <div
+          class="bg-gray-200 text-gray-900 rounded-xl px-4 py-2 max-w-[75%] relative"
+        >
+          <span class="text-xs text-gray-500 absolute bottom-1 left-2">10:00</span>
+        </div>
+      </div>
+    </div>
+    <div id="typing-indicator" class="px-4 py-2 hidden">
+      <div class="flex justify-start mb-4 items-end">
+        <img
+          src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png"
+          class="w-8 h-8 rounded-full mr-3"
+          alt="Bot typing"
+        />
+        <div
+          class="typing-indicator flex items-center space-x-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-full"
+        >
+          <span class="animate-pulse">•</span>
+          <span class="animate-pulse delay-150">•</span>
+          <span class="animate-pulse delay-300">•</span>
+        </div>
+      </div>
+    </div>
+    <div class="chat-footer p-3 border-t">
+      <form id="messageArea" class="flex space-x-2">
+        <input
+          type="text"
+          id="text"
+          name="msg"
+          placeholder="Digite sua mensagem..."
+          autocomplete="off"
+          class="flex-1 message-input rounded-full px-4 py-2 border"
+          required
+          autofocus
+        />
+        <button
+          type="submit"
+          id="send"
+          class="send-button w-12 h-12 rounded-full flex items-center justify-center bg-blue-500 text-white shadow-md hover:bg-blue-600 transition"
+          aria-label="Enviar mensagem"
+        >
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+      <p class="text-xs text-center text-gray-500 mt-2">Nosso compromisso é com você! 🌍</p>
+    </div>
+  </div>
+
+  <script>
+    // IMPORTANTE: Para conectar o frontend ao servidor, você DEVE substituir o URL abaixo.
+    // 1. Vá ao seu projeto Replit (onde o 'main.py' está a ser executado).
+    // 2. Certifique-se de que o projeto está ATIVO e a ser executado.
+    // 3. Copie o URL ATUAL do seu projeto Replit (geralmente mostrado no painel de pré-visualização ou na URL do navegador quando o projeto está ativo).
+    // 4. Cole esse URL AQUI, e certifique-se de que termina com '/get'.
+    //    Exemplo: 'https://SEU_URL_DO_REPLIT.replit.dev/get'
+    const endpointUrl = 'https://replit.com/@R0mul0Magalhaes/chatbot-4/get';
+      
+    const chatMessages = document.getElementById('chat-messages');
+    const typingIndicator = document.getElementById('typing-indicator');
+    const messageForm = document.getElementById('messageArea');
+    const messageInput = document.getElementById('text');
+
+    function appendMessage(content, isUser = false) {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('mb-4', 'items-end', 'flex');
+
+      if (isUser) {
+        wrapper.classList.add('justify-end');
+        wrapper.innerHTML = `
+          <div class="bg-blue-500 text-white rounded-xl px-4 py-2 max-w-[75%] relative">
+            <p>${content}</p>
+            <span class="text-xs text-gray-300 absolute right-2">Agora</span>
+          </div>
+        `;
+      } else {
+        wrapper.classList.add('justify-start');
+        wrapper.innerHTML = `
+          <img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" alt="Bot" class="w-8 h-8 rounded-full mr-3" />
+          <div class="bg-gray-200 text-gray-900 rounded-xl px-4 py-2 max-w-[75%] relative">
+            <p>${content}</p>
+            <span class="text-xs text-gray-500 absolute left-2">Agora</span>
+          </div>
+        `;
+      }
+      chatMessages.appendChild(wrapper);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showTyping(show) {
+      if (show) {
+        typingIndicator.classList.remove('hidden');
+      } else {
+        typingIndicator.classList.add('hidden');
+      }
+    }
+
+    messageForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userMessage = messageInput.value.trim();
+      if (!userMessage) return;
+
+      appendMessage(userMessage, true);
+      messageInput.value = '';
+      showTyping(true);
+
+      try {
+        // Log do URL para depuração
+        console.log('A tentar conectar a:', endpointUrl); 
+        const res = await fetch(endpointUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ msg: userMessage }), // Enviando a mensagem do usuário
+        });
+
+        // Verificar se a resposta foi bem-sucedida
+        if (!res.ok) {
+          throw new Error(`Error HTTP: ${res.status}`);
+        }
+
+        const data = await res.json(); // Parse da resposta JSON
+        showTyping(false); // Ocultar o indicador de digitação
+
+        // Verificar se a resposta contém dados
+        if (data && data.response) {
+          appendMessage(data.response, false); // Adicionar a resposta do servidor ao chat
+        } else {
+          appendMessage('Desculpe, não recebi resposta do servidor.', false);
+        }
+      } catch (error) {
+        showTyping(false); // Ocultar o indicador de digitação
+        // A mensagem de erro agora incluirá o 'Failed to fetch' se for esse o caso
+        appendMessage(`Erro ao conectar ao servidor: ${error.message}. Tente novamente mais tarde.`, false);
+        console.error('Erro na requisição fetch:', error); // Log do erro no console
+      }
+    });
+
+    // Inicialização do chat
+    appendMessage('Olá! 🌱 Sou o assistente do Consumo Consciente. Estou aqui para te ajudar com dicas sobre sustentabilidade, redução de desperdício e consumo responsável. Como posso te ajudar hoje?', false);
+  </script>

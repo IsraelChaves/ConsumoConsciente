@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil | Consumo Consciente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editar_perfil.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="flex justify-between items-center mb-8">
+            <div class="flex items-center space-x-2">
+                <img src="https://i.ibb.co/hRD4DmfN/logo.png" alt="Consumo Consciente" class="h-12">
+                <h1 class="text-2xl font-semibold text-gray-800">Consumo Consciente</h1>
+            </div>
+            <a href="javascript:history.back()" class="text-green-600 hover:text-green-800 font-medium">Voltar</a>
+        </header>
+        <main class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Editar Perfil</h2>
+                <form action="editar_perfil.php" method="POST">
+                    <div class="space-y-6">
+                        <!-- Nome -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                            <input type="text" id="name" name="name" 
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none input-focus" 
+                                   placeholder="Digite seu nome" value="">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                            <input type="email" id="email" name="email" 
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none input-focus" 
+                                   placeholder="Digite seu e-mail" value="">
+                        </div>
+                        
+                        <!-- Telefone -->
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none input-focus" 
+                                   placeholder="(00) 00000-0000" value="">
+                        </div>
+                        
+                        <!-- Senha -->
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Alterar senha</label>
+                            <input type="password" id="password" name="password" 
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none input-focus" 
+                                   placeholder="Digite sua nova senha">
+                        </div>
+                        
+                        <!-- Confirmar Senha -->
+                        <div>
+                            <label for="confirm_password" class="block text-sm font-medium text-gray-700 mb-1">Confirmar senha</label>
+                            <input type="password" id="confirm_password" name="confirm_password" 
+                                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none input-focus" 
+                                   placeholder="Confirme sua nova senha">
+                        </div>
+                        
+                        <!-- Botões -->
+                        <div class="flex flex-col sm:flex-row justify-end space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                            <button type="submit" name="delete_account" value="1"
+                                class="ml-4 px-4 py-2 bg-red-500 text-white border-2 border-solid rounded transition hover:bg-red-600"
+                                onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.');">
+                                Excluir conta
+                            </button>
+                            <button type="submit" class="px-6 py-2 rounded-lg font-medium text-white btn-primary">
+                                Salvar alterações
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2025 Consumo Consciente. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

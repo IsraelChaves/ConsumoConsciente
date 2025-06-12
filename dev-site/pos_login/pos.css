@@ -1,0 +1,73 @@
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+.profile-icon {
+    background-color: #4CAF50;
+    color: white;
+}
+        
+.section-title {
+    position: relative;
+    padding-left: 1rem;
+        }
+.section-title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 4px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+        
+.recipe-card:hover {        
+    transform: translateY(-5px);        
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+        
+.tip-card {
+    transition: all 0.3s ease;
+}
+        
+.tip-card:hover {        
+    background-color: #f0fff4;
+}
+        
+.floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+.floating-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+        
+.ingredients-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+.ingredients-list.show {
+            max-height: 500px;
+        }
+
+.ingredient-item {
+            display: flex;
+            align-items: center;
+            padding: 4px 0;
+        }
+    
+.ingredient-item:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 8px;
+        }

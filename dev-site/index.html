@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo Consciente - Planeje suas compras de forma inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12">
+                    <img src="/dev-site/assets/img/logo.png" alt="LOGO">
+                </div>
+                <span class="text-lg md:text-xl font-semibold text-green-600">Consumo Consciente</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#sobre" class="nav-link text-gray-600 hover:text-green-600 transition text-sm lg:text-base">Sobre</a>
+                <a href="#funcionalidades" class="nav-link text-gray-600 hover:text-green-600 transition text-sm lg:text-base">Funcionalidades</a>
+                <a href="#planos" class="nav-link text-gray-600 hover:text-green-600 transition text-sm lg:text-base">Planos</a>
+                <a href="#blog" class="nav-link text-gray-600 hover:text-green-600 transition text-sm lg:text-base">Blog</a>
+                <a href="#avaliacoes" class="nav-link text-gray-600 hover:text-green-600 transition text-sm lg:text-base">Avaliações</a>
+                <a href="#contato" class="nav-link text-gray-600 hover:text-green-600 transition text-sm lg:text-base">Contato</a>
+                <button class="bg-green-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-lg hover:bg-green-600 transition text-sm md:text-base">
+                   <a href="/login_cadastro/login.php">Login</a> 
+                </button>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>        
+        <div id="mobile-menu" class="mobile-menu bg-white md:hidden">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#sobre" class="nav-link text-gray-600 hover:text-green-600 py-2 border-b">Sobre</a>
+                <a href="#funcionalidades" class="nav-link text-gray-600 hover:text-green-600 py-2 border-b">Funcionalidades</a>
+                <a href="#planos" class="nav-link text-gray-600 hover:text-green-600 py-2 border-b">Planos</a>
+                <a href="#blog" class="nav-link text-gray-600 hover:text-green-600 py-2 border-b">Blog</a>
+                <a href="#avaliacoes" class="nav-link text-gray-600 hover:text-green-600 py-2 border-b">Avaliações</a>
+                <a href="#contato" class="nav-link text-gray-600 hover:text-green-600 py-2 border-b">Contato</a>
+               <a href="/login_cadastro/login.php" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition mb-2">
+                    Login
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="sobre" class="py-12 md:py-16 bg-gradient-to-r from-green-50 to-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center hero-content">
+            <div class="md:w-1/2 mb-8 md:mb-0 hero-text">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6 hero-title">
+                    O Consumo Consciente é uma ferramenta que ajuda você a planejar suas compras de forma inteligente e sustentável.
+                </h1>
+                <a href="#funcionalidades" class="btn-primary text-white px-6 py-2 md:px-8 md:py-3 rounded-lg text-base md:text-lg font-semibold">
+                    Experimente agora!
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center hero-image">
+                <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Planejamento de compras sustentáveis" class="rounded-lg shadow-lg w-full max-w-md object-cover h-64 md:h-80 lg:h-96">
+            </div>
+        </div>
+    </section>
+    <section id="funcionalidades" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12 section-title">Como Funciona?</h2>
+            <p class="text-lg md:text-xl text-center text-gray-600 max-w-3xl mx-auto mb-8 md:mb-16">
+                A ferramenta Consumo Consciente oferece uma série de funcionalidades para facilitar suas compras.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <div class="feature-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-lightbulb text-green-500 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3">Sugestões Inteligentes</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Receba sugestões de compras com base no seu histórico e preferências, ajudando você a fazer escolhas mais conscientes e evitar desperdícios.
+                    </p>
+                </div>
+                <div class="feature-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-search-dollar text-green-500 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3">Comparação de Preços</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Compare preços em diferentes estabelecimentos para encontrar a melhor oferta, economizando dinheiro sem comprometer a qualidade.
+                    </p>
+                </div>
+                <div class="feature-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-calendar-check text-green-500 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3">Planejamento Semanal</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Organize suas compras semanais com base em seu planejamento de refeições, evitando compras impulsivas e desnecessárias.
+                    </p>
+                </div>
+                <div class="feature-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                        <i class="fas fa-leaf text-green-500 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3">Impacto Ambiental</h3>
+                    <p class="text-gray-600 text-sm md:text-base">
+                        Saiba o impacto ambiental de suas escolhas de consumo e receba dicas para reduzir sua pegada ecológica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="planos" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12 section-title">Planos e Funcionalidades</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg overflow-hidden shadow-md plan-table">
+                    <thead class="bg-green-500 text-white">
+                        <tr>
+                            <th class="py-3 px-4 md:py-4 md:px-6 text-left rounded-tl-lg text-sm md:text-base">Funcionalidades</th>
+                            <th class="py-3 px-4 md:py-4 md:px-6 text-center text-sm md:text-base">Básico</th>
+                            <th class="py-3 px-4 md:py-4 md:px-6 text-center text-sm md:text-base">Intermediário</th>
+                            <th class="py-3 px-4 md:py-4 md:px-6 text-center text-sm md:text-base rounded-tr-lg">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Sugestões Inteligentes</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Comparação de Preços</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Planejamento Semanal</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Receitas Sustentáveis</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Relatórios de Consumo</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Suporte Prioritário</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-times text-red-400"></i></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 md:py-4 md:px-6 font-medium text-gray-900 text-sm md:text-base">Preço Mensal</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center font-bold text-green-600">Grátis</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center font-bold text-green-600">R$ 9,90</td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center font-bold text-green-600">R$ 19,90</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-3 px-4 md:py-4 md:px-6"></td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center">
+                                <button class="bg-green-500 text-white px-4 py-1 md:px-6 md:py-2 rounded-lg hover:bg-green-600 transition text-sm md:text-base">
+                                    Assinar
+                                </button>
+                            </td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center">
+                                <button class="bg-green-500 text-white px-4 py-1 md:px-6 md:py-2 rounded-lg hover:bg-green-600 transition text-sm md:text-base">
+                                    Assinar
+                                </button>
+                            </td>
+                            <td class="py-3 px-4 md:py-4 md:px-6 text-center">
+                                <button class="bg-green-500 text-white px-4 py-1 md:px-6 md:py-2 rounded-lg hover:bg-green-600 transition text-sm md:text-base">
+                                    Assinar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12 section-title">Dicas de Consumo Consciente</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Compras Inteligentes" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="blog-title text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3 transition duration-300">Compras Inteligentes</h3>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            Aprenda como planejar suas refeições e evitar o desperdício de alimentos com nossas estratégias de compra consciente.
+                        </p>
+                        <a href="#" class="text-green-500 font-medium hover:text-green-600 transition text-sm md:text-base">
+                            Ler mais <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                         alt="Economize com Consciência" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="blog-title text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3 transition duration-300">Economize com Consciência</h3>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            Dicas práticas para economizar e fazer escolhas sustentáveis que beneficiam seu bolso e o meio ambiente.
+                        </p>
+                        <a href="#" class="text-green-500 font-medium hover:text-green-600 transition text-sm md:text-base">
+                            Ler mais <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" 
+                         alt="Receitas Sustentáveis" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4 md:p-6">
+                        <h3 class="blog-title text-lg md:text-xl font-semibold text-gray-800 mb-2 md:mb-3 transition duration-300">Receitas Sustentáveis</h3>
+                        <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
+                            Sugestões de receitas criativas com sobras de alimentos para reduzir o desperdício e criar pratos deliciosos.
+                        </p>
+                        <a href="#" class="text-green-500 font-medium hover:text-green-600 transition text-sm md:text-base">
+                            Ler mais <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="avaliacoes" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12 section-title">O que dizem nossos usuários?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+                <div class="testimonial-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center mr-3 md:mr-4">
+                            <span class="text-green-500 font-bold text-sm md:text-base">JS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-sm md:text-base">João Silva</h4>
+                            <div class="flex text-yellow-400 text-xs md:text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic text-sm md:text-base">
+                        "O Consumo Consciente mudou a forma como faço compras. Agora evito desperdícios e economizo muito! Nunca mais comprei algo que não precisava."
+                    </p>
+                </div>
+                <div class="testimonial-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center mr-3 md:mr-4">
+                            <span class="text-green-500 font-bold text-sm md:text-base">MO</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-sm md:text-base">Maria Oliveira</h4>
+                            <div class="flex text-yellow-400 text-xs md:text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic text-sm md:text-base">
+                        "Adoro as sugestões de receitas! O aplicativo me ajuda a usar os ingredientes que tenho em casa, evitando desperdício e economizando dinheiro."
+                    </p>
+                </div>
+                <div class="testimonial-card bg-white p-6 md:p-8 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center mr-3 md:mr-4">
+                            <span class="text-green-500 font-bold text-sm md:text-base">CP</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-sm md:text-base">Carlos Pereira</h4>
+                            <div class="flex text-yellow-400 text-xs md:text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic text-sm md:text-base">
+                        "A comparação de preços é incrível! Sempre encontro as melhores ofertas. Já economizei mais de R$200 no mês passado graças ao app."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contato" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12 section-title">Fale Conosco</h2>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-6 md:p-8 rounded-lg shadow-sm">
+                <form id="contact-form" class="space-y-4 md:space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base">Nome</label>
+                        <input type="text" id="name" name="name" 
+                               class="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm md:text-base" 
+                               required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base">E-mail</label>
+                        <input type="email" id="email" name="email" 
+                               class="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm md:text-base" 
+                               required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-1 md:mb-2 text-sm md:text-base">Mensagem</label>
+                        <textarea id="message" name="message" rows="4" 
+                                  class="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm md:text-base" 
+                                  required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full text-white px-4 py-2 md:px-6 md:py-3 rounded-lg text-base md:text-lg font-semibold">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-green-800 text-white py-6 md:py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-3 md:mb-4 text-sm md:text-base">© 2025 Consumo Consciente. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+<script src="/dev-site/assets/js/script.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

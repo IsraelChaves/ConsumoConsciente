@@ -1,0 +1,34 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #f8fafc;
+}
+
+.brand-gradient {
+    background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+}
+
+.input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.password-toggle {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.logo-container {
+    max-width: 180px;
+    margin: 0 auto;
+}

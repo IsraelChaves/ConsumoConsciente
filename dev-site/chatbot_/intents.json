@@ -1,0 +1,86 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": [
+        "Oi",
+        "Olá",
+        "Como você está?",
+        "Tem alguém aí?",
+        "Bom dia",
+        "Boa tarde",
+        "Boa noite"
+      ],
+      "responses": [
+        "Oi :-)",
+        "Olá, obrigado por visitar",
+        "Oi, como posso te ajudar?",
+        "Oi, o que posso fazer por você?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Tchau", "Até logo", "Adeus"],
+      "responses": [
+        "Até logo, obrigado por visitar",
+        "Tenha um ótimo dia",
+        "Tchau! Volte novamente em breve."
+      ]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": ["Obrigado", "Muito obrigado", "Isso foi útil", "Valeu!"],
+      "responses": [
+        "Fico feliz em ajudar!",
+        "Sempre à disposição!",
+        "É um prazer ajudar"
+      ]
+    },
+    {
+      "tag": "itens",
+      "patterns": [
+        "Quais itens você tem?",
+        "Que tipos de produtos vocês vendem?",
+        "O que vocês vendem?"
+      ],
+      "responses": ["Vendemos café e chá", "Temos café e chá"]
+    },
+    {
+      "tag": "pagamentos",
+      "patterns": [
+        "Vocês aceitam cartões de crédito?",
+        "Vocês aceitam Mastercard?",
+        "Posso pagar com Paypal?",
+        "Aceitam apenas dinheiro?"
+      ],
+      "responses": [
+        "Aceitamos VISA, Mastercard e Paypal",
+        "Aceitamos a maioria dos principais cartões de crédito e Paypal"
+      ]
+    },
+    {
+      "tag": "entrega",
+      "patterns": [
+        "Quanto tempo demora a entrega?",
+        "Quanto tempo leva para enviar?",
+        "Quando receberei minha entrega?"
+      ],
+      "responses": [
+        "A entrega leva de 2 a 4 dias",
+        "O envio leva de 2 a 4 dias"
+      ]
+    },
+    {
+      "tag": "piada",
+      "patterns": [
+        "Me conta uma piada!",
+        "Diga algo engraçado!",
+        "Você sabe alguma piada?"
+      ],
+      "responses": [
+        "Por que o hipster queimou a boca? Ele bebeu o café antes de esfriar.",
+        "O que o búfalo disse quando seu filho foi para a faculdade? Bisão."
+      ]
+    }
+  ]
+}

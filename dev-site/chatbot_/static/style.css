@@ -1,0 +1,143 @@
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: #ffffff;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  height: 500px;
+  border: 1px solid #e5e7eb;
+}
+
+.chat-header {
+  border-radius: 15px 15px 0 0;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.chat-footer {
+  border-radius: 0 0 15px 15px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.message-input {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+.message-input:focus {
+  box-shadow: none;
+  outline: 0;
+  border-color: #3a7d5a;
+}
+
+.send-button {
+  background-color: #3a7d5a;
+  border: 0;
+  color: white;
+}
+
+.send-button:hover {
+  background-color: #2e5b47;
+}
+
+.user-message {
+  border-radius: 18px 18px 0 18px;
+  background-color: #3a7d5a;
+  padding: 12px 16px;
+  color: white;
+  max-width: 70%;
+  margin-left: auto;
+}
+
+.bot-message {
+  border-radius: 18px 18px 18px 0;
+  background-color: #f3f4f6;
+  padding: 12px 16px;
+  color: #1f2937;
+  max-width: 70%;
+  margin-right: auto;
+  border: 1px solid #e5e7eb;
+}
+
+.message-time {
+  font-size: 10px;
+  color: #6b7280;
+  display: block;
+  margin-top: 5px;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #9ca3af;
+  margin: 0 2px;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.online-icon {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #10b981;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  border: 1.5px solid white;
+}
+
+#chat-messages {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+/* Custom scrollbar */
+#chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
